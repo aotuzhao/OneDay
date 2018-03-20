@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">OneDay</string>
+    <string name="city_name">北京</string>
+    <string name="weather_text">晴</string>
+    <string name="weather_temperature">°C</string>
+    <string name="life_dress">穿衣建议</string>
+    <string name="life_car">洗车建议</string>
+    <string name="life_sport">运动指数</string>
+    <string name="life_uv">紫外线强度</string>
+    <string name="life_flu">感冒指数</string>
+    <string name="life_travel">旅游指数</string>
+    <string name="string_default">默认值</string>
+    <string name="news">今日头条</string>
+</resources>

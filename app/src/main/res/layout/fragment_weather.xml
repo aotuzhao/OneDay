@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bground"
+              android:orientation="vertical"
+              android:padding="3dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/location_city"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/city_name"
+            android:textColor="#e7f6f9"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/location"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/weather_icon"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/w_0"/>
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/weather_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/weather_text"
+                android:textColor="#fff"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#f7efef"
+                android:id="@+id/weather_temperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/weather_temperature"/>
+            <include layout="@layout/wend"/>
+            <include layout="@layout/line"/>
+            <ListView
+                android:id="@+id/weather_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <include android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     layout="@layout/suggestion_dress"
+                     />
+            <include android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     layout="@layout/suggestion_sport"
+                />
+            <include android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     layout="@layout/suggestion_car"
+                />
+            <include android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     layout="@layout/suggestion_flu"
+                />
+            <include android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     layout="@layout/suggestion_uv"
+                />
+            <include android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     layout="@layout/suggestion_travel"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
