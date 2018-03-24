@@ -11,4 +11,5 @@
     <string name="life_travel">旅游指数</string>
     <string name="string_default">默认值</string>
     <string name="news">今日头条</string>
+    <string name="write_location_phone">需要读写权限、定位权限、手机状态权限</string>
 </resources>

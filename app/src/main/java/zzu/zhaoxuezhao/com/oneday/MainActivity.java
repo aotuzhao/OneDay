@@ -30,10 +30,12 @@ public class MainActivity extends AppCompatActivity {
     WeatherFragment mWeatherFragment;
     NewsFragment mNewsFragment;
 
+    public static MainActivity sMainActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sMainActivity=this;
         ButterKnife.bind(this);
 
         if (savedInstanceState==null){
