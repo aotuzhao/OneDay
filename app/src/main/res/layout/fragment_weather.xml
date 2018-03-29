@@ -30,74 +30,96 @@
 
     </LinearLayout>
 
-    <ScrollView
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/weather_refresh"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <LinearLayout
 
-
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-            <ImageView
-                android:id="@+id/weather_icon"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:src="@drawable/w_0"/>
+            <LinearLayout
 
-            <TextView
-                android:gravity="center"
-                android:id="@+id/weather_text"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/weather_text"
-                android:textColor="#fff"
-                android:textSize="24sp"/>
+                android:orientation="vertical">
 
-            <TextView
-                android:gravity="center"
-                android:textSize="18sp"
-                android:textColor="#f7efef"
-                android:id="@+id/weather_temperature"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/weather_temperature"/>
-            <include layout="@layout/wend"/>
-            <include layout="@layout/line"/>
-            <ListView
-                android:id="@+id/weather_two"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/weather_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/w_0"/>
 
-            <include android:layout_height="wrap_content"
-                     android:layout_width="match_parent"
-                     layout="@layout/suggestion_dress"
-                     />
-            <include android:layout_height="wrap_content"
-                     android:layout_width="match_parent"
-                     layout="@layout/suggestion_sport"
-                />
-            <include android:layout_height="wrap_content"
-                     android:layout_width="match_parent"
-                     layout="@layout/suggestion_car"
-                />
-            <include android:layout_height="wrap_content"
-                     android:layout_width="match_parent"
-                     layout="@layout/suggestion_flu"
-                />
-            <include android:layout_height="wrap_content"
-                     android:layout_width="match_parent"
-                     layout="@layout/suggestion_uv"
-                />
-            <include android:layout_height="wrap_content"
-                     android:layout_width="match_parent"
-                     layout="@layout/suggestion_travel"
-                />
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/weather_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/weather_text"
+                    android:textColor="#fff"
+                    android:textSize="24sp"/>
 
-    </ScrollView>
+                <TextView
+                    android:id="@+id/weather_temperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/weather_temperature"
+                    android:textColor="#f7efef"
+                    android:textSize="18sp"/>
+
+                <include layout="@layout/wend"/>
+
+                <include layout="@layout/line"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/weather_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <include
+                    layout="@layout/suggestion_dress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <include
+                    layout="@layout/suggestion_sport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <include
+                    layout="@layout/suggestion_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <include
+                    layout="@layout/suggestion_flu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <include
+                    layout="@layout/suggestion_uv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <include
+                    layout="@layout/suggestion_travel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </LinearLayout>

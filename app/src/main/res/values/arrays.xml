@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="weather_icon">
+        <item>@drawable/w_0</item>
+        <item>@drawable/w_0</item>
+        <item>@drawable/w_0</item>
+        <item>@drawable/w_0</item>
+        <item>@drawable/w_4</item>
+        <item>@drawable/w_5</item>
+        <item>@drawable/w_5</item>
+        <item>@drawable/w_7</item>
+        <item>@drawable/w_7</item>
+        <item>@drawable/w_9</item>
+        <item>@drawable/w_10</item>
+        <item>@drawable/w_11</item>
+        <item>@drawable/w_12</item>
+        <item>@drawable/w_13</item>
+        <item>@drawable/w_14</item>
+        <item>@drawable/w_15</item>
+        <item>@drawable/w_16</item>
+        <item>@drawable/w_17</item>
+        <item>@drawable/w_18</item>
+        <item>@drawable/w_19</item>
+        <item>@drawable/w_20</item>
+        <item>@drawable/w_21</item>
+        <item>@drawable/w_22</item>
+        <item>@drawable/w_23</item>
+        <item>@drawable/w_24</item>
+        <item>@drawable/w_25</item>
+        <item>@drawable/w_26</item>
+        <item>@drawable/w_26</item>
+        <item>@drawable/w_26</item>
+        <item>@drawable/w_26</item>
+        <item>@drawable/w_30</item>
+        <item>@drawable/w_31</item>
+        <item>@drawable/w_32</item>
+        <item>@drawable/w_32</item>
+        <item>@drawable/w_34</item>
+        <item>@drawable/w_34</item>
+        <item>@drawable/w_34</item>
+        <item>@drawable/w_25</item>
+        <item>@drawable/w_0</item>
+        <item>@drawable/w_99</item>
+    </array>
+</resources>
