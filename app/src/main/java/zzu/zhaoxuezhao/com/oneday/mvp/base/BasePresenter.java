@@ -16,6 +16,8 @@ public abstract class BasePresenter<V extends BaseView, M extends BaseModel> {
     protected M mModel;
     private CompositeDisposable compositeDisposable;
 
+
+
     protected void addSubscribe(Disposable disposable) {
         if (compositeDisposable == null) {
             compositeDisposable = new CompositeDisposable();

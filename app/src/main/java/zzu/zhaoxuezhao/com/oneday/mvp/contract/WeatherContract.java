@@ -1,5 +1,6 @@
 package zzu.zhaoxuezhao.com.oneday.mvp.contract;
 
+import io.reactivex.Observable;
 import zzu.zhaoxuezhao.com.oneday.bean.suggestion.LifeSuggestionData;
 import zzu.zhaoxuezhao.com.oneday.bean.weather.WeatherData;
 import zzu.zhaoxuezhao.com.oneday.bean.weather.WeatherThreeData;
@@ -21,9 +22,9 @@ public interface WeatherContract {
     }
 
     interface Model extends BaseModel{
-        io.reactivex.Observable<WeatherData> getNowWeather();
-        io.reactivex.Observable<WeatherThreeData> getMoreWeather();
-        io.reactivex.Observable<LifeSuggestionData> getSugWeather();
+        Observable<WeatherData> getNowWeather();
+        Observable<WeatherThreeData> getMoreWeather();
+        Observable<LifeSuggestionData> getSugWeather();
         String getLocation();
     }
     abstract class Presenter extends BasePresenter<View,Model>{

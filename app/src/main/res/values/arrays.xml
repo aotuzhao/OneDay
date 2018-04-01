@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="weather_icon">
+    <integer-array name="weather_icon">
         <item>@drawable/w_0</item>
         <item>@drawable/w_0</item>
         <item>@drawable/w_0</item>
@@ -41,5 +41,18 @@
         <item>@drawable/w_25</item>
         <item>@drawable/w_0</item>
         <item>@drawable/w_99</item>
-    </array>
+    </integer-array>
+
+    <string-array name="news_type">
+        <item>头条</item>
+        <item>社会</item>
+        <item>国内</item>
+        <item>国际</item>
+        <item>娱乐</item>
+        <item>体育</item>
+        <item>军事</item>
+        <item>科技</item>
+        <item>财经</item>
+        <item>时尚</item>
+    </string-array>
 </resources>

@@ -33,17 +33,18 @@ public class WeatherDataModel implements WeatherContract.Model{
 
     @Override
     public Observable<WeatherThreeData> getMoreWeather() {
-        return null;
+        return WeatherApiMethods.getMoreWeather(ApiConstants.WEATHER_KEY,getLocation());
     }
 
     @Override
     public Observable<LifeSuggestionData> getSugWeather() {
 
-        return null;
+        return WeatherApiMethods.getSuggestions(ApiConstants.WEATHER_KEY,getLocation());
     }
 
     @Override
     public String getLocation() {
+
         final PreferenceHelper preferenceHelper=new PreferenceHelper();
 
         if (null == locationClientSingle) {
@@ -58,9 +59,15 @@ public class WeatherDataModel implements WeatherContract.Model{
         locationClientSingle.setLocationListener(new AMapLocationListener() {
             @Override
             public void onLocationChanged(AMapLocation location) {
+                if (location != null) {
+                   // Log.e("Zhao-LocationDataModel:",location.getCity().toString());
+                    preferenceHelper.setLocation(location.getCity().toString());
+                }else{
+                    Log.e("Zhao-LocationDataModel:","定位失败");
+                }
 
-                Log.e("Zhao-LocationDataModel:",location.getCity().toString());
-                preferenceHelper.setLocation(location.getCity().toString());
+
+
 
             }
         });

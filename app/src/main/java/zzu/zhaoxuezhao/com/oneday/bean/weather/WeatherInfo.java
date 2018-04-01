@@ -77,4 +77,9 @@ public class WeatherInfo {
     public void setWind_scale(String wind_scale) {
         this.wind_scale = wind_scale;
     }
+
+    @Override
+    public String toString() {
+        return getText_day()+getWind_direction()+getWind_scale();
+    }
 }

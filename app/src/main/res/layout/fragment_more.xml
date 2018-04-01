@@ -8,8 +8,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/more_flush"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="30"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
         app:canLoop="true"
         />
 
@@ -17,5 +17,5 @@
         layout="@layout/include_more"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"/>
+        android:layout_weight="1"/>
 </LinearLayout>

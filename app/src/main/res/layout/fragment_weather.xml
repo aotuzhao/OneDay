@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@drawable/bground"
+
               android:orientation="vertical"
               android:padding="3dp">
 
@@ -30,7 +30,7 @@
 
     </LinearLayout>
 
-    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+    <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/weather_refresh"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -121,5 +121,5 @@
             </LinearLayout>
 
         </ScrollView>
-    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

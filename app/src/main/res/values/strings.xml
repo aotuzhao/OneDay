@@ -13,4 +13,11 @@
     <string name="news">今日头条</string>
     <string name="write_location_phone">需要读写权限、定位权限、手机状态权限</string>
     <string name="error_text">发生未知错误</string>
+    <string name="alert_dialog_ok">确定</string>
+    <string name="alert_dialog_cancel">取消</string>
+    <string name="location_description_why_we_need_the_permission">默认</string>
+    <string name="location_description_title">默认</string>
+    <string name="storage_description_why_we_need_the_permission">moren</string>
+    <string name="storage_description_title">moren</string>
+    <string name="storage_and_location_rationale">需要定位权限</string>
 </resources>
