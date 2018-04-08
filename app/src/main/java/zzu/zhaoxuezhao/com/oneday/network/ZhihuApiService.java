@@ -1,55 +1,46 @@
 package zzu.zhaoxuezhao.com.oneday.network;
 
-import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import zzu.zhaoxuezhao.com.oneday.network.api.INewsApi;
-import zzu.zhaoxuezhao.com.oneday.utils.MyApplication;
 import zzu.zhaoxuezhao.com.oneday.common.ApiConstants;
+import zzu.zhaoxuezhao.com.oneday.network.api.IZhihuApi;
 import zzu.zhaoxuezhao.com.oneday.utils.XInterceptor;
 
-/**
- * Created by aotu on 2018/3/24.
- */
+public class ZhihuApiService {
+    public static IZhihuApi sZhihuNewsApiService;
 
-public class NewsApiService {
-    private static INewsApi sNewsApiService;
-
-    public static INewsApi getNewsApiService(){
-        if (sNewsApiService==null){
-            synchronized (INewsApi.class){
-                if (sNewsApiService==null){
-                    new NewsApiService();
+    public static IZhihuApi getZhihuApiService() {
+        if (sZhihuNewsApiService == null) {
+            synchronized (IZhihuApi.class) {
+                if (sZhihuNewsApiService == null) {
+                    new ZhihuApiService();
                 }
             }
         }
-        return sNewsApiService;
+        return sZhihuNewsApiService;
     }
 
-    private NewsApiService(){
-        File cacheFile = new File(MyApplication.getContext().getCacheDir(), "cache");
-        Cache cache = new Cache(cacheFile, 1024 * 1024 * 100);
+    private ZhihuApiService(){
+
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .connectTimeout(10, TimeUnit.SECONDS)
                 .readTimeout(20, TimeUnit.SECONDS)
                 .writeTimeout(20, TimeUnit.SECONDS)
                 .addNetworkInterceptor(new XInterceptor.CommonNetCache(20))
-                .addInterceptor(new XInterceptor.CommonNoNetCache(ApiConstants.CACHE_STALE_SEC, MyApplication.getContext()))
                 .addInterceptor(new XInterceptor.Retry(3))
-                .addInterceptor(new XInterceptor.CommonLog("NewsApiService Http :"))
-                .cache(cache)
+                .addInterceptor(new XInterceptor.CommonLog("ZhihuApiService Http :"))
+
                 .build();
         Retrofit retrofit = new Retrofit.Builder()
                 .client(okHttpClient)
-                .baseUrl(ApiConstants.NEWS_URL)
+                .baseUrl(ApiConstants.ZHIHU_BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
-        sNewsApiService=retrofit.create(INewsApi.class);
+        sZhihuNewsApiService=retrofit.create(IZhihuApi.class);
     }
 }

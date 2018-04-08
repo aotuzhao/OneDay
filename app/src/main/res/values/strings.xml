@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OneDay</string>
+    <string name="app_name">一天</string>
     <string name="city_name">北京</string>
     <string name="weather_text">晴</string>
     <string name="weather_temperature">°C</string>

@@ -9,7 +9,7 @@ import zzu.zhaoxuezhao.com.oneday.bean.news.NewsData;
  * Created by aotu on 2018/3/24.
  */
 
-public interface INewsApiService {
+public interface INewsApi {
 
     @GET("index")
     Observable<NewsData> getNews(@Query("key") String key,@Query("type") String type);

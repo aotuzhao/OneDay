@@ -23,13 +23,15 @@ public class NewsDetailPresenter extends NewsDetailContract.Presenter {
             public void onNext(NewsData newsData) {
                 if (newsData.getError_code()==10012){
                     mView.showErr("新闻请求次数达到上限");
-
+                    mView.finshLoadMore();
                 }else {
                     if (newsData.getResult().getData()!=null){
                         mView.showNews(newsData.getResult().getData());
                         mView.finshRefresh(true);
+                        mView.finshLoadMore();
                     }else {
                         mView.finshRefresh(false);
+                        mView.finshLoadMore();
                     }
                 }
 

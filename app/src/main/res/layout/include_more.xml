@@ -80,13 +80,13 @@
             android:background="#DCDCDC"/>
 
         <ImageView
-            android:id="@+id/setting"
+            android:id="@+id/zhihu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:padding="5dp"
-            android:src="@drawable/setting"/>
+            android:src="@drawable/zhihu"/>
     </LinearLayout>
 
 </LinearLayout>

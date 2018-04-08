@@ -1,5 +1,6 @@
 package zzu.zhaoxuezhao.com.oneday.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,7 +31,7 @@ import zzu.zhaoxuezhao.com.oneday.ui.adapter.NewsDateAdapter;
 public class NewsDetailFragment extends BaseFragment<NewsDetailPresenter, NewsDetailModel> implements NewsDetailContract.View {
 
 
-    public static String newsType;
+    public static  String newsType;
     @BindView(R.id.news_detail)
     RecyclerView mNewsDetail;
     @BindView(R.id.srl)
@@ -92,8 +93,18 @@ public class NewsDetailFragment extends BaseFragment<NewsDetailPresenter, NewsDe
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 NewsResult newsResult= (NewsResult) adapter.getItem(position);
-                Toast.makeText(getContext(),newsResult.getUrl() , Toast.LENGTH_SHORT).show();
                 webView(newsResult.getUrl());
+            }
+        });
+        mNewsDateAdapter.setOnItemLongClickListener(new BaseQuickAdapter.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(BaseQuickAdapter adapter, View view, int position) {
+                NewsResult newsResult= (NewsResult) adapter.getItem(position);
+                Intent textIntent = new Intent(Intent.ACTION_SEND);
+                textIntent.setType("text/plain");
+                textIntent.putExtra(Intent.EXTRA_TEXT, newsResult.getUrl());
+                startActivity(Intent.createChooser(textIntent, newsResult.getTitle()));
+                return false;
             }
         });
         mNewsDateAdapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_RIGHT);
@@ -103,9 +114,9 @@ public class NewsDetailFragment extends BaseFragment<NewsDetailPresenter, NewsDe
                 mNewsDetail.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-
+                        mPresenter.getNewsDate(newsType);
                     }
-                },3000);
+                },2000);
             }
         },mNewsDetail);
         mNewsDetail.setAdapter(mNewsDateAdapter);
@@ -151,6 +162,13 @@ public class NewsDetailFragment extends BaseFragment<NewsDetailPresenter, NewsDe
         if (mSrl.isRefreshing()) {
             mSrl.finishRefresh(b);
         }
+        mNewsDateAdapter.loadMoreComplete();
+
+    }
+
+    @Override
+    public void finshLoadMore() {
+        mNewsDateAdapter.loadMoreComplete();
     }
 
 

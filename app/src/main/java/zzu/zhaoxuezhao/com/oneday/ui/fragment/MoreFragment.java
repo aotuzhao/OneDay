@@ -1,5 +1,6 @@
 package zzu.zhaoxuezhao.com.oneday.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -23,6 +24,7 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 import zzu.zhaoxuezhao.com.oneday.R;
 import zzu.zhaoxuezhao.com.oneday.ui.activity.MainActivity;
+import zzu.zhaoxuezhao.com.oneday.ui.activity.ZhihuListActivity;
 import zzu.zhaoxuezhao.com.oneday.ui.adapter.ImageViewHolder;
 
 
@@ -41,8 +43,8 @@ public class MoreFragment extends Fragment {
     ImageView mMoreConstellation;
     @BindView(R.id.more_welfare)
     ImageView mMoreWelfare;
-    @BindView(R.id.setting)
-    ImageView mSetting;
+    @BindView(R.id.zhihu)
+    ImageView mZhihu;
     Unbinder unbinder;
     private List<String> mStrings=new ArrayList<String>();
     private List<String> urls=new ArrayList<String>();
@@ -62,7 +64,7 @@ public class MoreFragment extends Fragment {
         unbinder.unbind();
     }
 
-    @OnClick({R.id.more_blog, R.id.more_joke, R.id.more_constellation, R.id.more_welfare, R.id.setting})
+    @OnClick({R.id.more_blog, R.id.more_joke, R.id.more_constellation, R.id.more_welfare, R.id.zhihu})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.more_blog:
@@ -73,7 +75,9 @@ public class MoreFragment extends Fragment {
                 break;
             case R.id.more_welfare:
                 break;
-            case R.id.setting:
+            case R.id.zhihu:
+                Intent intent=new Intent(getContext(), ZhihuListActivity.class);
+                getContext().startActivity(intent);
                 break;
         }
     }

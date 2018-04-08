@@ -12,7 +12,7 @@ import zzu.zhaoxuezhao.com.oneday.network.WeatherApiMethods;
  * Created by aotu on 2018/3/26.
  */
 
-public class WeatherPresenter  extends WeatherContract.Presenter{
+public class WeatherPresenter extends WeatherContract.Presenter {
 
 
     @Override

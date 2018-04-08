@@ -27,7 +27,7 @@ public interface WeatherContract {
         Observable<LifeSuggestionData> getSugWeather();
         String getLocation();
     }
-    abstract class Presenter extends BasePresenter<View,Model>{
+    abstract class Presenter extends BasePresenter<View,Model> {
         public abstract void getNowWeather();
         public abstract void  getThreeWeather();
         public abstract void getSugWeather();

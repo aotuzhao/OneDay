@@ -9,4 +9,10 @@
     <color name="colorTextAssistant">#888888</color>
     <color name="colorBackgroundDark">#f2f2f2</color>
     <color name="white">#FFFFFF</color>
+    <color name="gery">#FAFAFA</color>
+    <color name="darkgery">#797979</color>
+    <color name="trangery">#512e2e2e</color>
+    <color name="black">#252525</color>
+
+
 </resources>
