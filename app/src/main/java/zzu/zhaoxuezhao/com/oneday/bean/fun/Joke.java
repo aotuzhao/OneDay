@@ -1,16 +1,16 @@
 package zzu.zhaoxuezhao.com.oneday.bean.fun;
 
-import com.google.gson.annotations.SerializedName;
 
 public class Joke {
+
     /**
-     * title : 放弃
-     * thumburl : http://ww3.sinaimg.cn/large/bd759d6djw1er64gqwe0rj20at0y6wg6.jpg
-     * sourceurl : http://down.laifudao.com/images/tupian/201541217943.jpg
-     * height : 1230
-     * width : 389
-     * class : 2
-     * url : http://www.laifudao.com/tupian/43201.htm
+     * title : 我说前面那位男同学，现在社会一片和谐，人民安居乐业，你衣服开这么大的衩，你是想说你家很穷么
+     * thumburl : http://ww3.sinaimg.cn/large/bd698b0fjw1egxqgsxas2j20dw0ipt9w.jpg
+     * sourceurl : http://down.laifudao.com/images/tupian/2014529232630.jpg
+     * height : 673
+     * width : 500
+     * class : 1
+     * url : http://www.laifudao.com/tupian/32829.htm
      */
 
     private String title;
@@ -18,8 +18,6 @@ public class Joke {
     private String sourceurl;
     private String height;
     private String width;
-    @SerializedName("class")
-    private String classX;
     private String url;
 
     public String getTitle() {
@@ -60,14 +58,6 @@ public class Joke {
 
     public void setWidth(String width) {
         this.width = width;
-    }
-
-    public String getClassX() {
-        return classX;
-    }
-
-    public void setClassX(String classX) {
-        this.classX = classX;
     }
 
     public String getUrl() {

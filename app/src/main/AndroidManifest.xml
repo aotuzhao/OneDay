@@ -3,7 +3,6 @@
           package="zzu.zhaoxuezhao.com.oneday">
 
 
-
     <application
         android:name=".utils.MyApplication"
         android:allowBackup="true"
@@ -19,15 +18,12 @@
 
 
         <!--高德地图定位-->
-        <service android:name="com.amap.api.location.APSService"
-                 android:enabled="true"/>
+        <service
+            android:name="com.amap.api.location.APSService"
+            android:enabled="true"/>
 
         <activity android:name=".ui.activity.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".ui.activity.MoreActivity">
 
@@ -41,12 +37,18 @@
         <activity android:name=".ui.activity.TestActivity">
 
         </activity>
+        <activity android:name=".ui.activity.JokeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="sensor"
-            android:theme="@style/FinestWebViewTheme.Light" />
+            android:theme="@style/FinestWebViewTheme.Light"/>
 
 
     </application>

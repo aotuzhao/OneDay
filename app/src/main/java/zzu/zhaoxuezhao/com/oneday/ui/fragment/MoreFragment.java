@@ -23,6 +23,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 import zzu.zhaoxuezhao.com.oneday.R;
+import zzu.zhaoxuezhao.com.oneday.ui.activity.JokeActivity;
 import zzu.zhaoxuezhao.com.oneday.ui.activity.MainActivity;
 import zzu.zhaoxuezhao.com.oneday.ui.activity.ZhihuListActivity;
 import zzu.zhaoxuezhao.com.oneday.ui.adapter.ImageViewHolder;
@@ -70,6 +71,8 @@ public class MoreFragment extends Fragment {
             case R.id.more_blog:
                 break;
             case R.id.more_joke:
+                Intent intent1=new Intent(getContext(), JokeActivity.class);
+                getContext().startActivity(intent1);
                 break;
             case R.id.more_constellation:
                 break;
