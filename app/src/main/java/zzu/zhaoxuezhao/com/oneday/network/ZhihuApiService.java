@@ -11,7 +11,7 @@ import zzu.zhaoxuezhao.com.oneday.network.api.IZhihuApi;
 import zzu.zhaoxuezhao.com.oneday.utils.XInterceptor;
 
 public class ZhihuApiService {
-    public static IZhihuApi sZhihuNewsApiService;
+    private static IZhihuApi sZhihuNewsApiService;
 
     public static IZhihuApi getZhihuApiService() {
         if (sZhihuNewsApiService == null) {

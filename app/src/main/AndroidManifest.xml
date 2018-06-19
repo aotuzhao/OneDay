@@ -23,10 +23,11 @@
             android:enabled="true"/>
 
         <activity android:name=".ui.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
-        </activity>
-        <activity android:name=".ui.activity.MoreActivity">
-
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".ui.activity.ZhihuListActivity">
 
@@ -38,12 +39,20 @@
 
         </activity>
         <activity android:name=".ui.activity.JokeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
+        <activity android:name=".ui.activity.ConstellationActivity">
+
+        </activity>
+        <activity android:name=".ui.activity.ConstellationInfoActivity">
+
+        </activity>
+        <!-- <activity android:name=".ui.activity.BlogActivity">
+
+         </activity>-->
+        <!-- <activity android:name=".ui.activity.WelfareActivity">
+
+         </activity>-->
         <activity
             android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"

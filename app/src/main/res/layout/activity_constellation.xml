@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+    >
+
+    <TableRow
+        android:layout_weight="1">
+
+        <ImageView
+            style="@style/constellation"
+            android:onClick="getBaiyang"
+            android:src="@drawable/constellation_01"/>
+
+        <ImageView
+            style="@style/constellation"
+            android:onClick="getJinniu"
+            android:src="@drawable/constellation_02"/>
+
+        <ImageView
+            style="@style/constellation"
+            android:onClick="getShuangzi"
+            android:src="@drawable/constellation_03"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_weight="1">
+
+        <ImageView
+            style="@style/constellation"
+            android:onClick="getJuxie"
+            android:src="@drawable/constellation_04"/>
+
+        <ImageView
+            style="@style/constellation"
+            android:onClick="getShizi"
+            android:src="@drawable/constellation_05"/>
+
+        <ImageView
+            style="@style/constellation"
+            android:onClick="getChunv"
+            android:src="@drawable/constellation_06"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_weight="1">
+
+        <ImageView
+            style="@style/constellation"
+            android:onClick="getTiancheng"
+            android:src="@drawable/constellation_07"/>
+
+        <ImageView
+            style="@style/constellation"
+            android:onClick="getTianxie"
+            android:src="@drawable/constellation_08"/>
+
+        <ImageView
+            style="@style/constellation"
+            android:onClick="getSheshou"
+            android:src="@drawable/constellation_09"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_weight="1">
+
+        <ImageView
+            style="@style/constellation"
+            android:onClick="getMojie"
+            android:src="@drawable/constellation_10"/>
+
+        <ImageView
+            style="@style/constellation"
+            android:onClick="getShuiping"
+            android:src="@drawable/constellation_11"/>
+
+        <ImageView
+            style="@style/constellation"
+            android:onClick="getShuangyu"
+            android:src="@drawable/constellation_12"/>
+    </TableRow>
+
+</TableLayout>

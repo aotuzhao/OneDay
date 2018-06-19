@@ -23,6 +23,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 import zzu.zhaoxuezhao.com.oneday.R;
+import zzu.zhaoxuezhao.com.oneday.ui.activity.ConstellationActivity;
 import zzu.zhaoxuezhao.com.oneday.ui.activity.JokeActivity;
 import zzu.zhaoxuezhao.com.oneday.ui.activity.MainActivity;
 import zzu.zhaoxuezhao.com.oneday.ui.activity.ZhihuListActivity;
@@ -47,8 +48,9 @@ public class MoreFragment extends Fragment {
     @BindView(R.id.zhihu)
     ImageView mZhihu;
     Unbinder unbinder;
-    private List<String> mStrings=new ArrayList<String>();
-    private List<String> urls=new ArrayList<String>();
+    private List<String> mStrings = new ArrayList<String>();
+    private List<String> urls = new ArrayList<String>();
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -69,29 +71,37 @@ public class MoreFragment extends Fragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.more_blog:
+               /* Intent intent3=new Intent(getContext(), BlogActivity.class);
+                getContext().startActivity(intent3);*/
+                webView("https://blog.csdn.net/aotumemedazhao1996");
                 break;
             case R.id.more_joke:
-                Intent intent1=new Intent(getContext(), JokeActivity.class);
+                Intent intent1 = new Intent(getContext(), JokeActivity.class);
                 getContext().startActivity(intent1);
                 break;
             case R.id.more_constellation:
+                Intent intent2 = new Intent(getContext(), ConstellationActivity.class);
+                getContext().startActivity(intent2);
                 break;
             case R.id.more_welfare:
+               /* Intent intent4=new Intent(getContext(), WelfareActivity.class);
+                getContext().startActivity(intent4);*/
+                webView("https://www.zhuangbi.info/");
                 break;
             case R.id.zhihu:
-                Intent intent=new Intent(getContext(), ZhihuListActivity.class);
+                Intent intent = new Intent(getContext(), ZhihuListActivity.class);
                 getContext().startActivity(intent);
                 break;
         }
     }
 
-    private void initView(){
+    private void initView() {
         mMoreFlush.setPages(new CBViewHolderCreator() {
             @Override
             public Object createHolder() {
                 return new ImageViewHolder();
             }
-        },mStrings).setPageIndicator(new int[]{R.drawable.ic_page_indicator, R.drawable.ic_page_indicator_focused})
+        }, mStrings).setPageIndicator(new int[]{R.drawable.ic_page_indicator, R.drawable.ic_page_indicator_focused})
                 .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL);
         mMoreFlush.setOnItemClickListener(new OnItemClickListener() {
             @Override
@@ -102,15 +112,15 @@ public class MoreFragment extends Fragment {
 
     }
 
-    private void webView(String url){
-        new  FinestWebView.Builder(MainActivity.sMainActivity)
+    private void webView(String url) {
+        new FinestWebView.Builder(MainActivity.sMainActivity)
                 .webViewSupportZoom(true)
                 .webViewBuiltInZoomControls(true)
                 .show(url);
     }
 
-    private void initData(){
-        if (mStrings.isEmpty()){
+    private void initData() {
+        if (mStrings.isEmpty()) {
             mStrings.add("http://www.freezxz.com/wp-content/uploads/2018/04/top.jpg");
             mStrings.add("https://imgsa.baidu.com/forum/w%3D580/sign=77991c307b8da9774e2f86238051f872/492ad3f9d72a605918243e192034349b033bbaa6.jpg");
             mStrings.add("http://imgsrc.baidu.com/forum/pic/item/b341094f78f0f73675718d020255b319eac413cf.jpg");

@@ -19,4 +19,51 @@
     <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">14sp</item>
     </style>
+    <!-- 星座样式-->
+    <style name="constellation">
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <!-- RatingBar样式-->
+    <style name="myRatingBar" parent="Base.Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar</item>
+        <item name="android:numColumns">5</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:maxHeight">16dp</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">1</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:isIndicator">false</item>
+    </style>
+
+    <style name="ratingText">
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="constellationText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginTop">@dimen/dp_4</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="constellationInfoText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:background">@color/colorTextStar</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 </resources>

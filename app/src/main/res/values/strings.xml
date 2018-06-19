@@ -20,4 +20,25 @@
     <string name="storage_description_why_we_need_the_permission">moren</string>
     <string name="storage_description_title">moren</string>
     <string name="storage_and_location_rationale">需要定位权限</string>
+    
+    
+    <string name="summary_star">综合指数</string>
+    <string name="love_star">爱情指数</string>
+    <string name="love_txt">爱情运势</string>
+    <string name="money_star">财富指数</string>
+    <string name="money_txt">财富运势</string>
+    <string name="work_star">工作指数</string>
+    <string name="work_txt">工作运势</string>
+    <string name="health_txt">健康运势</string>
+    <string name="grxz">贵人星座</string>
+    <string name="lucky_num">幸运数字</string>
+    <string name="lucky_color">幸运颜色</string>
+    <string name="lucky_direction">吉利方位</string>
+    <string name="next_day">明日运势</string>
+    <string name="next_week">本周运势</string>
+    <string name="day_notice">今日谏言</string>
+    <string name="general_txt">运势简评</string>
+    <string name="week_notice">本周提醒</string>
+    
+
 </resources>

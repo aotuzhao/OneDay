@@ -31,7 +31,7 @@ import zzu.zhaoxuezhao.com.oneday.ui.adapter.NewsDateAdapter;
 public class NewsDetailFragment extends BaseFragment<NewsDetailPresenter, NewsDetailModel> implements NewsDetailContract.View {
 
 
-    public static  String newsType;
+    public static String newsType;
     @BindView(R.id.news_detail)
     RecyclerView mNewsDetail;
     @BindView(R.id.srl)
@@ -92,14 +92,14 @@ public class NewsDetailFragment extends BaseFragment<NewsDetailPresenter, NewsDe
         mNewsDateAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                NewsResult newsResult= (NewsResult) adapter.getItem(position);
+                NewsResult newsResult = (NewsResult) adapter.getItem(position);
                 webView(newsResult.getUrl());
             }
         });
         mNewsDateAdapter.setOnItemLongClickListener(new BaseQuickAdapter.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(BaseQuickAdapter adapter, View view, int position) {
-                NewsResult newsResult= (NewsResult) adapter.getItem(position);
+                NewsResult newsResult = (NewsResult) adapter.getItem(position);
                 Intent textIntent = new Intent(Intent.ACTION_SEND);
                 textIntent.setType("text/plain");
                 textIntent.putExtra(Intent.EXTRA_TEXT, newsResult.getUrl());
@@ -116,9 +116,9 @@ public class NewsDetailFragment extends BaseFragment<NewsDetailPresenter, NewsDe
                     public void run() {
                         mPresenter.getNewsDate(newsType);
                     }
-                },2000);
+                }, 2000);
             }
-        },mNewsDetail);
+        }, mNewsDetail);
         mNewsDetail.setAdapter(mNewsDateAdapter);
 
         mSrl.setOnRefreshListener(new OnRefreshListener() {
@@ -177,8 +177,8 @@ public class NewsDetailFragment extends BaseFragment<NewsDetailPresenter, NewsDe
         Toast.makeText(getContext(), error, Toast.LENGTH_SHORT).show();
     }
 
-    private void webView(String url){
-        new  FinestWebView.Builder(MainActivity.sMainActivity)
+    private void webView(String url) {
+        new FinestWebView.Builder(MainActivity.sMainActivity)
                 .webViewSupportZoom(true)
                 .webViewBuiltInZoomControls(true)
                 .show(url);

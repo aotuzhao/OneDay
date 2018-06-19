@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+    >
+
+    <TableRow
+
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp">
+
+        <TextView
+            style="@style/ratingText"
+            android:text="@string/summary_star"
+            />
+
+        <RatingBar
+            android:id="@+id/summary_star"
+            style="@style/myRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rating="1"
+            />
+
+        <TextView
+
+            style="@style/ratingText"
+            android:text="@string/work_star"
+            />
+
+        <RatingBar
+            android:id="@+id/work_star"
+            style="@style/myRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rating="1"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp">
+
+        <TextView
+            style="@style/ratingText"
+            android:text="@string/money_star"
+            />
+
+        <RatingBar
+            android:id="@+id/money_star"
+            style="@style/myRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rating="1"
+            />
+
+        <TextView
+
+            style="@style/ratingText"
+            android:text="@string/love_star"
+            />
+
+        <RatingBar
+            android:id="@+id/love_star"
+            style="@style/myRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rating="1"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp">
+
+        <TextView
+            style="@style/ratingText"
+            android:text="@string/grxz"
+            />
+
+
+        <TextView
+            android:id="@+id/grxz"
+            style="@style/ratingText"
+            android:text="@string/string_default"
+            />
+
+
+        <TextView
+            style="@style/ratingText"
+            android:text="@string/lucky_num"
+            />
+
+
+        <TextView
+            android:id="@+id/lucky_num"
+            style="@style/ratingText"
+            android:text="@string/string_default"
+            />
+    </TableRow>
+
+    <TableRow
+        >
+
+        <TextView
+            style="@style/ratingText"
+            android:text="@string/lucky_direction"
+            />
+
+
+        <TextView
+            android:id="@+id/lucky_direction"
+            style="@style/ratingText"
+            android:text="@string/string_default"
+            />
+
+
+        <TextView
+            style="@style/ratingText"
+            android:text="@string/lucky_color"
+            />
+
+
+        <TextView
+            android:id="@+id/lucky_color"
+            style="@style/ratingText"
+            android:text="@string/string_default"
+            />
+    </TableRow>
+</TableLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/app_bg3"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/star_icon"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/constellation_01"/>
+
+        <include
+            layout="@layout/include_constellation_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/dp_4"/>
+
+        <TextView
+            style="@style/constellationText"
+            android:text="@string/day_notice"
+            />
+
+        <TextView
+            android:id="@+id/day_notice"
+            style="@style/constellationInfoText"
+            android:text="@string/string_default"
+            />
+
+        <TextView
+            style="@style/constellationText"
+            android:text="@string/general_txt"
+            />
+
+        <TextView
+            android:id="@+id/day_general"
+            style="@style/constellationInfoText"
+            android:text="@string/string_default"
+            />
+
+        <TextView
+            style="@style/constellationText"
+            android:text="@string/love_txt"
+            />
+
+        <TextView
+            android:id="@+id/day_love"
+            style="@style/constellationInfoText"
+            android:text="@string/string_default"
+            />
+
+        <TextView
+            style="@style/constellationText"
+            android:text="@string/work_txt"
+            />
+
+        <TextView
+            android:id="@+id/day_work"
+            style="@style/constellationInfoText"
+            android:text="@string/string_default"
+            />
+
+        <TextView
+            style="@style/constellationText"
+            android:text="@string/money_txt"
+            />
+
+        <TextView
+            android:id="@+id/day_money"
+            style="@style/constellationInfoText"
+            android:text="@string/string_default"
+            />
+
+        <!--明日运势-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/next_day"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_16"/>
+
+        <TextView
+            style="@style/constellationText"
+            android:text="@string/general_txt"
+            />
+
+        <TextView
+            android:id="@+id/tomorrow_general"
+            style="@style/constellationInfoText"
+            android:text="@string/string_default"
+            />
+
+        <TextView
+            style="@style/constellationText"
+            android:text="@string/love_txt"
+            />
+
+        <TextView
+            android:id="@+id/tomorrow_love"
+            style="@style/constellationInfoText"
+            android:text="@string/string_default"
+            />
+
+        <TextView
+            style="@style/constellationText"
+            android:text="@string/work_txt"
+            />
+
+        <TextView
+            android:id="@+id/tomorrow_work"
+            style="@style/constellationInfoText"
+            android:text="@string/string_default"
+            />
+
+        <TextView
+            style="@style/constellationText"
+            android:text="@string/money_txt"
+            />
+
+        <TextView
+            android:id="@+id/tomorrow_money"
+            style="@style/constellationInfoText"
+            android:text="@string/string_default"
+            />
+
+        <!--本周运势-->
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/next_week"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_16"/>
+
+        <TextView
+            style="@style/constellationText"
+            android:text="@string/general_txt"
+            />
+
+        <TextView
+            android:id="@+id/week_general"
+            style="@style/constellationInfoText"
+            android:text="@string/string_default"
+            />
+
+        <TextView
+            style="@style/constellationText"
+            android:text="@string/love_txt"
+            />
+
+        <TextView
+            android:id="@+id/week_love"
+            style="@style/constellationInfoText"
+            android:text="@string/string_default"
+            />
+
+        <TextView
+            style="@style/constellationText"
+            android:text="@string/work_txt"
+            />
+
+        <TextView
+            android:id="@+id/week_work"
+            style="@style/constellationInfoText"
+            android:text="@string/string_default"
+            />
+
+        <TextView
+            style="@style/constellationText"
+            android:text="@string/money_txt"
+            />
+
+        <TextView
+            android:id="@+id/week_money"
+            style="@style/constellationInfoText"
+            android:text="@string/string_default"
+            />
+
+        <TextView
+            style="@style/constellationText"
+            android:text="@string/health_txt"
+            />
+
+        <TextView
+            android:id="@+id/week_health"
+            style="@style/constellationInfoText"
+            android:text="@string/string_default"
+            />
+
+    </LinearLayout>
+</ScrollView>
